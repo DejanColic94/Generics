@@ -29,5 +29,13 @@ public class Main {
         inter.matchResult(juventus,7,0);
 
 
+        System.out.println("Rankings :");
+        System.out.println(liverpool.getName() + " : " + liverpool.ranking());
+        System.out.println(inter.getName() + " : " + inter.ranking());
+        System.out.println(juventus.getName() + " : " + juventus.ranking());
+
+        System.out.println(liverpool.compareTo(juventus));
+        System.out.println(juventus.compareTo(inter));
+        System.out.println(inter.compareTo(liverpool));
     }
 }
