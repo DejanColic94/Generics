@@ -78,20 +78,22 @@ public class Team<T extends Player> {
         return members.size();
     }
 
-    public void matchResult(Team opponent, int ourScore, int theirScore) {
+    public void matchResult(Team<T> opponent, int ourScore, int theirScore) {
+        String msg;
         if(ourScore > theirScore) {
             won++;
-            System.out.println("Won against "+opponent.getName());
+            msg = " beat ";
         }else if(ourScore < theirScore) {
             lost++;
-            System.out.println("Lost to "+opponent.getName());
+            msg = " lost to ";
         }else {
             tied++;
-            System.out.println("Tied with "+opponent.getName());
+            msg = " drew with ";
         }
         played++;
 
         if(opponent != null) {
+            System.out.println(this.getName() + msg +opponent.getName());
             opponent.matchResult(null, theirScore, ourScore);
         }
     }

@@ -19,5 +19,15 @@ public class Main {
 
 //        Team<String> brokenTeam = new Team<>("This won't work");
 //        brokenTeam.addPlayer("Fake team");
+
+
+        Team<SoccerPlayer> liverpool = new Team<>("Liverpool");
+        Team<SoccerPlayer> inter = new Team<>("Inter");
+        Team<SoccerPlayer> juventus = new Team<>("Juventus");
+
+        liverpool.matchResult(juventus,2,1);
+        inter.matchResult(juventus,7,0);
+
+
     }
 }
